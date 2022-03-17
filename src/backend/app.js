@@ -4,8 +4,8 @@ const router = express.Router();
 const path = require("path");
 
 const mealsRouter = require("./api/meals");
+const reservationRouter = require("./api/reservations")
 const buildPath = path.join(__dirname, "../../dist");
-const port = process.env.PORT || 3000;
 const cors = require("cors");
 
 // For week4 no need to look into this!
@@ -19,13 +19,14 @@ app.use(express.json());
 
 app.use(cors());
 
-router.use("/meals", mealsRouter);
-
 if (process.env.API_PATH) {
   app.use(process.env.API_PATH, router);
 } else {
   throw "API_PATH is not set. Remember to set it in your .env file"
 }
+
+app.use("/api/meals", mealsRouter);
+app.use("/api/reservations", reservationRouter);
 
 // for the frontend. Will first be covered in the react class
 app.use("*", (req, res) => {
