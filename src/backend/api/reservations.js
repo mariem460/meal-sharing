@@ -11,9 +11,13 @@ router.get("/", async (request, response) => {
 //add new reservation
 router.post("/", async (request, response) => {
     const newReservation = request.body;
-    const insertedReservation = await knex("Meal").insert({
-      ...newReservation,
-      created_date: new Date(newReservation.created_date)
+    const insertedReservation = await knex("Reservation").insert({
+      meal_id: newReservation.id,
+      contact_name: newReservation.name,
+      contact_email: newReservation.email,
+      contact_phonenumber: newReservation.phoneNumber,
+      number_of_guests: newReservation.guests,
+      created_date: new Date()
     })
     const inserted = await knex("Reservation")
       .where('id', insertedReservation[0])

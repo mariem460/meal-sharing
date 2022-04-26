@@ -56,7 +56,9 @@ router.put("/:id", async(request, response)=> {
 router.post("/", async (request, response) => {
   const newMeal = request.body;
   const insertedMeal = await knex("Meal").insert({
-    ...newMeal
+    ...newMeal,
+    when: newMeal.when,
+    created_date: new Date()
   })
   const inserted = await knex("Meal")
     .where('id', insertedMeal[0])
