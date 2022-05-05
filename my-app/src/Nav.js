@@ -12,6 +12,10 @@ function Nav() {
             <Link to="meals/add">
             <li> Add meal </li>
             </Link>
+            <Link to='meals/:id'>
+            <li>  Book seat</li>
+            </Link>
+           
          
         </ul>
     </nav>

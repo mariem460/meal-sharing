@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import Nav from './Nav'
 import "./AddMeal.css"
 
 function AddMeal() {
@@ -62,7 +61,7 @@ function AddMeal() {
         <label for="meal-title">Meal title</label>
         <input type="text" onChange={handelMealName} value={addedMeals.title}/>
         <label for="meal-description">Meal description</label>
-        <input type="text" onChange={handelMealDescription} value={addedMeals.description}/>
+        <textarea onChange={handelMealDescription} value={addedMeals.description}></textarea>
         <label for="meal-location">Location</label>
         <input type="text" onChange={handelLocation} value={addedMeals.location}/>
         <label for="meal-Date">Date</label>

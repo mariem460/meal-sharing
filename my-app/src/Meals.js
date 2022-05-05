@@ -11,10 +11,11 @@ function Meals() {
     },[meals])
 
   const displayedMeals = meals.map((meal)=>
- <div className="items">
-    <h2 className='meal-title'>{meal.title}</h2> 
-    <h4 className='meal-description'>{meal.description}</h4> 
- </div>
+    <div className="items">
+      <h3></h3>
+      <h2 className='meal-title'>Meal id: {meal.id}<br></br> Title: {meal.title}</h2> 
+      <h4 className='meal-description'>{meal.description}</h4> 
+    </div>
   )
 
   return (
