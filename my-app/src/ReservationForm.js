@@ -72,6 +72,7 @@ function ReservationForm({mealTitle, mealPrice, maxReservations, mealId}) {
         <input type="email" value={inputsValues.email} onChange={handelEmail}/>
         <label for="guests">Number of guests</label>
         <input type="number" value={inputsValues.guests} onChange={handelNumberOfGuests}/>
+        {availbleSeats === 0  ? <h1>Oups! we dont have seats for this meal </h1> : null}
         {inputsValues.guests> availbleSeats ? <h2>You have only {availbleSeats} available seats.</h2>: null}
         {inputsValues.guests <= availbleSeats && inputsValues.guests !== 0 ? <button onClick={handelClick}>Create reservation</button> : null}
         {clicked ? <h1>Your reservation is done!</h1> : null}

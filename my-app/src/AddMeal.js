@@ -10,7 +10,6 @@ function AddMeal() {
         when: "",
         price: "",
         max_reservations: ""
-
     })
     const handelMealName = (e) => {
         setAddedMeals({...addedMeals, title: e.target.value})
@@ -32,7 +31,6 @@ function AddMeal() {
 
     }
     const handelAddMeal = () => {
-        setclicked(true)
         setclicked(true)
         fetch("http://localhost:5000/api/meals",
         {
