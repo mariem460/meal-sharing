@@ -8,7 +8,7 @@ function Meals() {
         fetch("http://localhost:5000/api/meals")
           .then((response)=> response.json())
           .then((data)=>setMeals(data))
-    },[meals])
+    },[])
 
   const displayedMeals = meals.map((meal)=>
     <div className="items">

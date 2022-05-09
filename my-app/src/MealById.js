@@ -19,7 +19,6 @@ function MealById() {
          maxReservations={meal.max_reservations} key={meal.id} mealId= {mealId}/>)
 
     const handelMealId = (e) => {
-          console.log(e.target.value)
           setMealId(e.target.value)
       }
 
