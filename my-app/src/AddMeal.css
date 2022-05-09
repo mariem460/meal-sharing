@@ -1,0 +1,7 @@
+.add-meal-form {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    margin-left: 660px;
+
+}
