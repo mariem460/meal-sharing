@@ -1,5 +1,6 @@
 use heroku_58273f993aa1584;
 SET NAMES utf8mb4;
+SET auto_increment_increment = 1;
 
 CREATE Table `Meal`(
     `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
@@ -51,7 +52,7 @@ values
     ("amazing", "The food is absolutely amazing everything we tasted melted in other mouths.", 5, 5, "2022-11-22" );
     
 INSERT INTO `Reservation`(`number_of_guests`, `meal_id`, `created_date`, `contact_phonenumber`, `contact_name`, `contact_email`) 
-   values 
+   values
    (5, 3, "2022-6-16", "+216 54635731", "ayoub hajjem", "ayoub32@yahoo.com"),
    (6, 2, "2022-7-18", "+33 54628982", "mariem oueslati", "mariem122@gmail.com"),
    (2, 4, "2022-8-19", "+91 54731635", "babou ninja", "babou12@hotmail.com"),
