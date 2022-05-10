@@ -32,7 +32,7 @@ function AddMeal() {
     }
     const handelAddMeal = () => {
         setclicked(true)
-        fetch("http://localhost:5000/api/meals",
+        fetch(`/api/meals`,
         {
             headers: {
               'Accept': 'application/json',

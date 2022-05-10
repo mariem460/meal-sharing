@@ -13,7 +13,7 @@ function ReservationForm({mealTitle, mealPrice, maxReservations, mealId}) {
         })
 
     useEffect(()=> {
-        fetch(`http://localhost:5000/api/reservations/${mealId}`)
+        fetch(`/api/reservations/${mealId}`)
             .then((response)=> response.json())
             .then((data)=> setReservation(data))
     }, [])
@@ -35,7 +35,7 @@ function ReservationForm({mealTitle, mealPrice, maxReservations, mealId}) {
         setInputValues({...inputsValues, guests: e.target.value})
     }
     const handelClick = () => {
-        fetch("http://localhost:5000/api/reservations",
+        fetch(`/api/reservations`,
         {
             headers: {
               'Accept': 'application/json',

@@ -9,7 +9,7 @@ function MealById() {
     const [clicked, setClicked] = useState(false)
     const handelSearch = ()=> {
       setClicked(true)
-      fetch(`http://localhost:5000/api/meals/${mealId}`)
+      fetch(`/api/meals/${mealId}`)
       .then((response)=> response.json())
       .then((mealToReserve)=>setMeals(mealToReserve))
     }
